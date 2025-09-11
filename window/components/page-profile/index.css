@@ -250,6 +250,7 @@ page-profile {
                                 .trow {
                                     .td {
                                         height: 40px;
+                                        transition: background-color 0.2s;
 
                                         &:first-child {
                                             padding: 0 20px;
@@ -267,6 +268,12 @@ page-profile {
                                         .th,
                                         .td {
                                             background-color: var(--color-white-15);
+                                        }
+                                    }
+
+                                    &:hover {
+                                        .td {
+                                            background-color: var(--color-white-20);
                                         }
                                     }
                                 }
