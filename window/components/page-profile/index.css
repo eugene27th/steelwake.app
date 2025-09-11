@@ -194,51 +194,67 @@ page-profile {
                 width: 1155px;
 
                 .block {
-                    &:nth-child(1) {
-                        table {
-                            th,
-                            td {
-                                width: 80px;
-                                min-width: 80px;
-                                font-weight: 500;
-                                text-align: center;
+                    flex: 1;
 
-                                &:last-child {
-                                    width: 100%;
-                                }
+                    &:nth-child(1) {
+                        .table {
+                            display: flex;
+                            gap: 5px;
+                            flex-direction: column;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 1;
+                            letter-spacing: 0.4px;
+                            overflow: hidden;
+
+                            .thead,
+                            .tbody .trow {
+                                display: grid;
+                                gap: 5px 1px;
+                                grid-template-columns: 300px repeat(6, 80px) 100%;
                             }
 
-                            thead {
-                                tr {
-                                    th {
-                                        img {
-                                            width: 18px;
-                                            height: 18px;
-                                            opacity: 0.5;
-                                        }
+                            .th,
+                            .td {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: var(--color-white-10);
+                            }
 
-                                        &:first-child {
-                                            width: 300px;
-                                            padding: 0 20px;
-                                            font-size: 18px;
-                                            font-weight: 600;
-                                            text-align: start;
-                                        }
+                            .thead {
+                                .th {
+                                    height: 50px;
+                                    font-size: 18px;
+                                    background-color: var(--color-white-15);
+
+                                    img {
+                                        width: 18px;
+                                        height: 18px;
+                                        opacity: 0.5;
+                                    }
+
+                                    &:first-child {
+                                        padding: 0 20px;
+                                        justify-content: start;
                                     }
                                 }
                             }
 
-                            tbody {
-                                overflow: scroll;
+                            .tbody {
+                                display: flex;
+                                gap: 5px;
+                                flex-direction: column;
+                                overflow-y: scroll;
 
-                                tr {
-                                    td {
+                                .trow {
+                                    .td {
+                                        height: 40px;
+
                                         &:first-child {
-                                            width: 300px;
                                             padding: 0 20px;
-                                            display: flex;
                                             gap: 10px;
-                                            align-items: center;
+                                            justify-content: start;
 
                                             img {
                                                 width: 15px;
@@ -246,7 +262,19 @@ page-profile {
                                             }
                                         }
                                     }
+
+                                    &:nth-child(even) {
+                                        .th,
+                                        .td {
+                                            background-color: var(--color-white-15);
+                                        }
+                                    }
                                 }
+                            }
+
+                            .th {
+                                font-weight: 600;
+                                color: var(--color-grey-light);
                             }
                         }
                     }

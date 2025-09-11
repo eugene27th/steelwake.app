@@ -88,51 +88,6 @@ button {
     }
 }
 
-table {
-    padding: 0;
-    margin: -5px -1px;
-    border-spacing: 1px 5px;
-    font-size: 14px;
-    border: none;
-    outline: none;
-
-    th,
-    td {
-        line-height: 1;
-        letter-spacing: 0.4px;
-        background-color: var(--color-white-10);
-    }
-
-    th {
-        color: var(--color-grey-light);
-    }
-
-    thead {
-        tr {
-            th {
-                height: 50px;
-                background-color: var(--color-white-15);
-            }
-        }
-    }
-
-    tbody {
-        tr {
-            td {
-                height: 40px;
-                font-weight: 500;
-            }
-
-            &:nth-child(even) {
-                th,
-                td {
-                    background-color: var(--color-white-15);
-                }
-            }
-        }
-    }
-}
-
 
 body {
     height: 100dvh;

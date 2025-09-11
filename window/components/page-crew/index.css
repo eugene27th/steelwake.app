@@ -288,27 +288,65 @@ page-crew {
                 width: 720px;
 
                 .block {
-                    table {
-                        th,
-                        td {
-                            width: 60px;
-                            min-width: 60px;
-                            text-align: center;
+                    .table {
+                        display: flex;
+                        gap: 5px;
+                        flex-direction: column;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 1;
+                        letter-spacing: 0.4px;
+                        overflow: hidden;
 
-                            &:last-child {
-                                width: 100%;
+                        .thead,
+                        .tbody .trow {
+                            display: grid;
+                            gap: 5px 1px;
+                            grid-template-columns: repeat(6, 60px) 100%;
+                        }
+
+                        .th,
+                        .td {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: var(--color-white-10);
+                        }
+
+                        .thead {
+                            .th {
+                                height: 50px;
+                                background-color: var(--color-white-15);
+
+                                img {
+                                    width: 27px;
+                                    height: 18px;
+                                }
                             }
                         }
 
-                        thead {
-                            tr {
-                                th {
-                                    img {
-                                        width: 27px;
-                                        height: 18px;
+                        .tbody {
+                            display: flex;
+                            gap: 5px;
+                            flex-direction: column;
+
+                            .trow {
+                                .td {
+                                    height: 40px;
+                                }
+
+                                &:nth-child(even) {
+                                    .th,
+                                    .td {
+                                        background-color: var(--color-white-15);
                                     }
                                 }
                             }
+                        }
+
+                        .th {
+                            font-weight: 600;
+                            color: var(--color-grey-light);
                         }
                     }
                 }
