@@ -1,0 +1,318 @@
+page-crew {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .head {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--color-white-50);
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .options {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            button {
+                height: 30px;
+                padding: 0 15px;
+                background-color: transparent;
+                border: 1px solid var(--color-white-50);
+                transition: background-color 0.2s, border-color 0.2s;
+
+                &:hover {
+                    border-color: var(--color-white);
+                    background-color: var(--color-white-10);
+                }
+            }
+        }
+    }
+
+    .body {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .column {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+
+            .block {
+                display: flex;
+                gap: 5px;
+                flex-shrink: 0;
+                flex-direction: column;
+                overflow: hidden;
+
+                &.shrink {
+                    flex-shrink: 1;
+                }
+
+                .title {
+                    margin-bottom: 5px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: var(--color-grey);
+                }
+            }
+
+            &:nth-child(1) {
+                width: 380px;
+
+                .block {
+                    flex: 1;
+
+                    .hint {
+                        margin-top: 5px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        color: var(--color-grey);
+                    }
+
+                    .list {
+                        display: flex;
+                        gap: 5px;
+                        flex-direction: column;
+                        overflow-y: scroll;
+
+                        .item {
+                            height: 50px;
+                            display: flex;
+                            flex-shrink: 0;
+                            background-color: var(--color-white-10);
+                            transition: background-color 0.2s;
+                            cursor: pointer;
+
+                            &.selected {
+                                background-color: var(--color-white-20);
+                                border-right: 2px solid var(--color-green-50);
+                            }
+
+                            &:hover {
+                                background-color: var(--color-white-20);
+                            }
+
+                            .image {
+                                width: 90px;
+                                height: 100%;
+                                background-color: var(--color-white-10);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: cover;
+                            }
+
+                            .content {
+                                padding: 0 10px;
+                                display: flex;
+                                gap: 2px;
+                                justify-content: center;
+                                flex-direction: column;
+                                flex: 1;
+
+                                .top {
+                                    display: flex;
+                                    align-items: center;
+
+                                    img {
+                                        width: 18px;
+                                        height: 12px;
+                                    }
+
+                                    .name {
+                                        margin-left: 5px;
+                                        font-size: 16px;
+                                        font-weight: 600;
+                                        cursor: pointer;
+
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+
+                                .bottom {
+                                    display: flex;
+                                    gap: 10px;
+                                    align-items: center;
+                                    font-size: 12px;
+                                    color: var(--color-grey-light);
+
+                                    .entry {
+                                        display: flex;
+                                        align-items: center;
+
+                                        .value {
+                                            margin-left: 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+            &:nth-child(2) {
+                width: 500px;
+
+                .block {
+                    &:nth-child(1) {
+                        .image {
+                            height: 240px;
+                            background-color: var(--color-white-10);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .list {
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                            flex-direction: column;
+
+                            .item {
+                                width: 100%;
+                                height: 40px;
+                                display: flex;
+                                justify-content: space-between;
+                                background-color: var(--color-white-10);
+
+                                .image {
+                                    width: 40px;
+                                    height: 100%;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    background-size: cover;
+                                }
+
+                                .content {
+                                    padding: 0 10px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    flex: 1;
+                                    font-weight: 500;
+
+                                    .name {
+                                        cursor: pointer;
+
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+                                    }
+
+                                    .options {
+                                        display: flex;
+                                        gap: 10px;
+                                        align-items: center;
+                                        
+                                        button {
+                                            padding: 0;
+                                            font-size: 12px;
+                                            color: var(--color-grey);
+                                            background-color: transparent;
+                                            border: none;
+                                            transition: color 0.2s;
+
+                                            &:hover {
+                                                color: var(--color-white);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        button {
+                            height: 50px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: var(--color-white-10);
+                            border: none;
+                            transition: background-color 0.2s;
+
+                            &:hover {
+                                background-color: var(--color-white-20);
+                            }
+
+                            .name {
+                                letter-spacing: 0.4px;
+                                color: var(--color-white);
+                            }
+
+                            .hint {
+                                font-size: 10px;
+                                color: var(--color-grey);
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        button {
+                            height: 50px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: var(--color-white-10);
+                            border: none;
+                            transition: background-color 0.2s;
+
+                            &:hover {
+                                background-color: var(--color-white-20);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                width: 720px;
+
+                .block {
+                    table {
+                        th,
+                        td {
+                            width: 60px;
+                            min-width: 60px;
+                            text-align: center;
+
+                            &:last-child {
+                                width: 100%;
+                            }
+                        }
+
+                        thead {
+                            tr {
+                                th {
+                                    img {
+                                        width: 27px;
+                                        height: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

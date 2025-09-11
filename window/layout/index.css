@@ -1,0 +1,267 @@
+@import url("../assets/fonts/inter/index.css");
+
+
+:root {
+    --color-black: #000000;
+    --color-black-80: rgba(0, 0, 0, 0.8);
+
+    --color-white: #FFFFFF;
+    --color-white-5: rgba(255, 255, 255, 0.05);
+    --color-white-10: rgba(255, 255, 255, 0.1);
+    --color-white-15: rgba(255, 255, 255, 0.15);
+    --color-white-20: rgba(255, 255, 255, 0.2);
+    --color-white-30: rgba(255, 255, 255, 0.3);
+    --color-white-40: rgba(255, 255, 255, 0.4);
+    --color-white-50: rgba(255, 255, 255, 0.5);
+    --color-white-80: rgba(255, 255, 255, 0.8);
+
+    --color-grey: #777777;
+    --color-grey-light: #A2A2A2;
+    --color-grey-dark: #1C1C1C;
+    --color-red: #FF3636;
+    --color-yellow: #F5E61C;
+    --color-green: #00FD66;
+    --color-green-50: rgba(0, 253, 101, 0.5);
+    --color-blue: #00ABEB;
+    --color-blue-30: rgba(0, 172, 235, 0.3);
+
+    --color-background: #2B2D31;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+}
+
+
+.red {
+    color: var(--color-red) !important;
+}
+
+.green {
+    color: var(--color-green) !important;
+}
+
+.blue {
+    color: var(--color-blue) !important;
+}
+
+.yellow {
+    color: var(--color-yellow) !important;
+}
+
+.white {
+    color: var(--color-white) !important;
+}
+
+
+.medium {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+button {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-white);
+    white-space: nowrap;
+    cursor: pointer;
+    
+    &:disabled {
+        color: var(--color-white-20);
+        pointer-events: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+table {
+    padding: 0;
+    margin: -5px -1px;
+    border-spacing: 1px 5px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+
+    th,
+    td {
+        line-height: 1;
+        letter-spacing: 0.4px;
+        background-color: var(--color-white-10);
+    }
+
+    th {
+        color: var(--color-grey-light);
+    }
+
+    thead {
+        tr {
+            th {
+                height: 50px;
+                background-color: var(--color-white-15);
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                height: 40px;
+                font-weight: 500;
+            }
+
+            &:nth-child(even) {
+                th,
+                td {
+                    background-color: var(--color-white-15);
+                }
+            }
+        }
+    }
+}
+
+
+body {
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.2px;
+    color: var(--color-white);
+    background-image: url(../assets/images/backgrounds/8.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--color-background);
+    user-select: none;
+    overflow: hidden;
+}
+
+
+.layout {
+    &.header,
+    &.page,
+    &.footer {
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-black-80);
+
+        .container {
+            width: min(1920px, 100%);
+            display: flex;
+            overflow: hidden;
+        }
+    }
+
+    &.header {
+        .container {
+            padding: 80px 100px 20px 100px;
+            align-items: center;
+            justify-content: space-between;
+
+            button {
+                height: 40px;
+                font-size: 20px;
+                background-color: transparent;
+                border: 2px solid var(--color-white-10);
+                transition: border-color 0.2s;
+
+                &:hover {
+                    border-color: var(--color-white-80);
+                }
+
+                &.active {
+                    border-color: var(--color-yellow);
+                }
+            }
+
+            .row {
+                display: flex;
+                align-items: center;
+
+                &:first-child {
+                    gap: 20px;
+
+                    button {
+                        padding: 0 20px;
+                    }
+                }
+                
+                &:last-child {
+                    gap: 15px;
+
+                    button {
+                        width: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &:hover {
+                            img {
+                                opacity: 0.8;
+                            }
+                        }
+
+                        img {
+                            opacity: 0.3;
+                            transition: opacity 0.2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.page {
+        margin: 20px 0;
+        flex: 1;
+        overflow: hidden;
+
+        .container {
+            padding: 20px 100px;
+            flex-direction: column;
+        }
+    }
+
+    &.footer {
+        height: 30px;
+        font-size: 14px;
+        font-weight: 300;
+
+        .container {
+            padding: 0 100px;
+            align-items: center;
+            justify-content: space-between;
+
+            .row,
+            .entry {
+                display: flex;
+                align-items: center;
+            }
+
+            .row {
+                gap: 15px;
+
+                .entry {
+                    .value {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

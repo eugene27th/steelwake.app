@@ -1,0 +1,155 @@
+page-home {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    overflow: hidden;
+
+    .section {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        &:nth-child(1) {
+            width: 1200px;
+
+            .inline {
+                display: flex;
+                gap: 20px;
+                flex: 1;
+
+                .item {
+                    position: relative;
+                    display: flex;
+                    justify-content: end;
+                    flex-direction: column;
+                    flex: 1;
+                    background-color: var(--color-black);
+                    cursor: pointer;
+
+                    &::before {
+                        position: absolute;
+                        inset: 0;
+                        content: "";
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        transition: opacity 0.2s;
+                        opacity: 0.5;
+                    }
+
+                    .content {
+                        padding: 30px 20px;
+                        display: flex;
+                        gap: 10px;
+                        flex-direction: column;
+                        background-color: var(--color-white-10);
+                        border-top: 1px solid var(--color-white-40);
+                        transition: background-color 0.2s, border-color 0.2s;
+                        z-index: 1;
+
+                        .name {
+                            font-size: 24px;
+                            font-weight: bold;
+                        }
+
+                        .description {
+                            font-size: 14px;
+                        }
+                    }
+
+                    &.active,
+                    &:hover {
+                        .content {
+                            background-color: var(--color-black-80);
+                            border-color: var(--color-white);
+                        }
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        &::before {
+                            background-image: url(/window/assets/images/backgrounds/2.png);
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &::before {
+                            background-image: url(/window/assets/images/backgrounds/3.png);
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        &::before {
+                            background-image: url(/window/assets/images/backgrounds/4.png);
+                        }
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            width: 460px;
+
+            .list {
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                overflow-y: scroll;
+
+                .item {
+                    height: 100px;
+                    display: flex;
+                    flex-shrink: 0;
+                    background-color: var(--color-white-10);
+                    transition: background-color 0.2s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--color-white-20);
+                    }
+
+                    .image {
+                        width: 160px;
+                        min-width: 160px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        opacity: 0.8;
+                    }
+
+                    .content {
+                        padding: 0 10px;
+                        display: flex;
+                        gap: 5px;
+                        flex-direction: column;
+                        justify-content: center;
+                        overflow: hidden;
+
+                        .name,
+                        .description {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+
+                        .name {
+                            font-weight: bold;
+                            white-space: nowrap;
+                        }
+
+                        .description {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

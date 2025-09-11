@@ -1,0 +1,36 @@
+input-password {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--color-white-10);
+
+    .name {
+        padding: 0 20px;
+        color: var(--color-grey-light);
+        white-space: nowrap;
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--color-white);
+        background-color: var(--color-white-10);
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        opacity: 0.4;
+    }
+}
