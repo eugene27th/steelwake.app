@@ -44,7 +44,11 @@ const renderPage = async function(name) {
         button.classList.remove(`active`);
     };
 
-    document.querySelector(`.layout.header button[page=${name}]`).classList.add(`active`);
+    const navButton = document.querySelector(`.layout.header button[page=${name}]`);
+
+    if (navButton) {
+        navButton.classList.add(`active`);
+    };
 };
 
 
@@ -61,4 +65,4 @@ await registerComponent(`input-select`);
 await registerComponent(`input-text`);
 await registerComponent(`input-password`);
 
-await renderPage(`profile`);
+await renderPage(`crew_host`);

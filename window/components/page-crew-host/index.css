@@ -1,4 +1,4 @@
-page-crew {
+page-crew-host {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -233,6 +233,16 @@ page-crew {
                                             &:hover {
                                                 color: var(--color-white);
                                             }
+                                        }
+                                    }
+
+                                    &.empty {
+                                        justify-content: center;
+
+                                        .name {
+                                            font-weight: bold;
+                                            color: var(--color-grey);
+                                            pointer-events: none;
                                         }
                                     }
                                 }
