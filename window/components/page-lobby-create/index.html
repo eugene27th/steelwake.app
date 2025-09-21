@@ -1,0 +1,485 @@
+<div class="head">
+    <div class="title">СОЗДАНИЕ ЛОББИ</div>
+    <div class="options">
+        <button class="small">СОЗДАТЬ ЛОББИ</button>
+        <button class="small" page="lobby-list">ВЕРНУТЬСЯ К СПИСКУ</button>
+    </div>
+</div>
+<div class="body">
+    <div class="column">
+        <div class="block">
+            <div class="title">НАСТРОЙКИ ЛОББИ</div>
+            <input-text id="name" name="НАЗВАНИЕ" placeholder="salwador`s lobby" value="salwador`s lobby"></input-text>
+            <input-password id="password" name="ПАРОЛЬ" placeholder="ПАРОЛЬ"></input-password>
+            <input-select id="visible" name="ВИДИМОСТЬ">
+                <option value="all">ДЛЯ ВСЕХ</option>
+                <option value="friends">ДЛЯ ДРУЗЕЙ</option>
+            </input-select>
+        </div>
+        <div class="block">
+            <div class="title">КАРТА И ВАРИАЦИЯ</div>
+            <div class="map" style="background-image: url(/window/assets/images/maps/chernarus.png);"></div>
+            <input-select id="map" name="КАРТА">
+                <option value="chernarus">ЧЕРНАРУСЬ</option>
+                <option value="altis">АЛТИС</option>
+            </input-select>
+            <input-select id="variation" name="ВАРИАЦИЯ">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </input-select>
+        </div>
+    </div>
+    <div class="column">
+        <div class="block">
+            <div class="title">ТЕХНИКА КОМАНДЫ А</div>
+            <input-select id="nation" name="НАЦИЯ">
+                <option value="all" selected>ВСЕ</option>
+                <option value="ru">РОССИЯ</option>
+                <option value="us">США</option>
+                <option value="gb">БРИТАНИЯ</option>
+                <option value="fr">ФРАНЦИЯ</option>
+                <option value="de">ГЕРМАНИЯ</option>
+            </input-select>
+            <input-select id="level" name="УРОВЕНЬ">
+                <option value="all">ВСЕ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </input-select>
+            <div class="hint">ВЫБЕРИТЕ ТЕХНИКУ ИЗ СПИСКА</div>
+            <div class="list">
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t72a.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-72А</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item selected">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t72b.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-72Б</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">3</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t64a.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-64А</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t64b.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-64Б</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">3</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t80b.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-80Б</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t80u.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-80У</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">3</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/m60a1.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/us.png">
+                            <div class="name">M60A1 (AOS)</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">1</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t55a.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-55А</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">1</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/bmp3.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">БМП-3</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/btr80a.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">БТР-80А</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="block">
+            <div class="title">ТЕХНИКА КОМАНДЫ Б</div>
+            <input-select id="nation" name="НАЦИЯ">
+                <option value="all" selected>ВСЕ</option>
+                <option value="ru">РОССИЯ</option>
+                <option value="us">США</option>
+                <option value="gb">БРИТАНИЯ</option>
+                <option value="fr">ФРАНЦИЯ</option>
+                <option value="de">ГЕРМАНИЯ</option>
+            </input-select>
+            <input-select id="level" name="УРОВЕНЬ">
+                <option value="all">ВСЕ</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </input-select>
+            <div class="hint">ВЫБЕРИТЕ ТЕХНИКУ ИЗ СПИСКА</div>
+            <div class="list">
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t72a.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-72А</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item selected">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t72b.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-72Б</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">3</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t64a.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-64А</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t64b.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-64Б</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">3</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t80b.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-80Б</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t80u.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-80У</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">3</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/m60a1.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/us.png">
+                            <div class="name">M60A1 (AOS)</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">1</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/t55a.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">Т-55А</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">1</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/bmp3.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">БМП-3</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="background-image: url(/window/assets/images/vehicles/btr80a.png);"></div>
+                    <div class="content">
+                        <div class="top">
+                            <img src="/window/assets/images/flags/ru.png">
+                            <div class="name">БТР-80А</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="entry">
+                                <div class="name">УРОВЕНЬ:</div>
+                                <div class="value">2</div>
+                            </div>
+                            <div class="entry">
+                                <div class="name">ЭКИПАЖ:</div>
+                                <div class="value">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="block">
+            <div class="title">КРАТКАЯ СПРАВКА</div>
+            <div class="list">
+                <div class="item">
+                    <div class="name">РЕЖИМ ИГРЫ</div>
+                    <div class="content">
+                        <div class="paragraph">Побеждает команда, захватившая базу противника или уничтожившая все его юниты.</div>
+                        <div class="paragraph">Если время сессии истекает, объявляется ничья.</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="name">ТЕХНИКА КОМАНДЫ</div>
+                    <div class="content">
+                        <div class="paragraph">Вы выбираете технику, которая будет доступна в списке для выбора у игрока каждой команды.</div>
+                        <div class="paragraph">Фильтры над списками помогут найти подходящую технику. Кнопка «выбрать всё» выбирает всю технику из списка, учитывая выбранные в данный момент фильтры.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

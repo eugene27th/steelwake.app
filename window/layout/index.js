@@ -65,4 +65,4 @@ await registerComponent(`input-select`);
 await registerComponent(`input-text`);
 await registerComponent(`input-password`);
 
-await renderPage(`crew_host`);
+await renderPage(`home`);

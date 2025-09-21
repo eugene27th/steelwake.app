@@ -125,7 +125,6 @@ body {
     &.header {
         .container {
             padding: 80px 100px 20px 100px;
-            align-items: center;
             justify-content: space-between;
 
             button {
@@ -148,7 +147,7 @@ body {
                 display: flex;
                 align-items: center;
 
-                &:first-child {
+                &:nth-child(1) {
                     gap: 20px;
 
                     button {
@@ -156,7 +155,7 @@ body {
                     }
                 }
                 
-                &:last-child {
+                &:nth-child(2) {
                     gap: 15px;
 
                     button {
@@ -199,7 +198,6 @@ body {
 
         .container {
             padding: 0 100px;
-            align-items: center;
             justify-content: space-between;
 
             .row,

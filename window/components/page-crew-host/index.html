@@ -2,12 +2,21 @@
     <div class="title">СОБЕРИТЕ СВОЙ ЭКИПАЖ И ОТПРАВЬТЕСЬ В БОЙ</div>
     <div class="options">
         <button class="small">ПОКИНУТЬ ЭКИПАЖ</button>
+        <button class="small">ПОКИНУТЬ ЭКИПАЖ</button>
     </div>
 </div>
 <div class="body">
     <div class="column">
         <div class="block">
             <div class="title">ВЫБЕРИТЕ ТЕХНИКУ</div>
+            <input-select id="nation" name="НАЦИЯ">
+                <option value="all" selected>ВСЕ</option>
+                <option value="ru">РОССИЯ</option>
+                <option value="us">США</option>
+                <option value="gb">БРИТАНИЯ</option>
+                <option value="fr">ФРАНЦИЯ</option>
+                <option value="de">ГЕРМАНИЯ</option>
+            </input-select>
             <input-select id="level" name="УРОВЕНЬ">
                 <option value="all">ВСЕ</option>
                 <option value="1">1</option>
@@ -16,14 +25,6 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
-            </input-select>
-            <input-select id="nation" name="НАЦИЯ">
-                <option value="all" selected>ВСЕ</option>
-                <option value="ru">РОССИЯ</option>
-                <option value="us">США</option>
-                <option value="gb">БРИТАНИЯ</option>
-                <option value="fr">ФРАНЦИЯ</option>
-                <option value="de">ГЕРМАНИЯ</option>
             </input-select>
             <div class="hint">ВЫБЕРИТЕ ТЕХНИКУ ИЗ СПИСКА</div>
             <div class="list">
@@ -222,7 +223,9 @@
     </div>
     <div class="column">
         <div class="block">
-            <div class="title">ВЫБРАННАЯ ТЕХНИКА</div>
+            <div class="title">
+                ВЫБРАННАЯ ТЕХНИКА
+            </div>
             <div class="image" style="background-image: url(/window/assets/images/vehicles/t72b.png);"></div>
         </div>
         <div class="block">
@@ -234,18 +237,13 @@
                         <div class="name yellow">Yournickname</div>
                     </div>
                 </div>
-                <!-- <div class="item">
+                <div class="item">
                     <div class="image" style="background-image: url(/window/assets/images/avatars/2.png);"></div>
                     <div class="content">
                         <div class="name">Calenevayah</div>
                         <div class="options">
                             <button>ВЫГНАТЬ</button>
                         </div>
-                    </div>
-                </div> -->
-                <div class="item">
-                    <div class="content empty">
-                        <div class="name">ПУСТОЙ СЛОТ</div>
                     </div>
                 </div>
                 <div class="item">
