@@ -19,11 +19,14 @@
     --color-grey-light: #A2A2A2;
     --color-grey-dark: #1C1C1C;
     --color-red: #FF3636;
+    --color-red-30: rgba(255, 54, 54, 0.3);
+    --color-red-50: rgba(255, 54, 54, 0.5);
     --color-yellow: #F5E61C;
     --color-green: #00FD66;
     --color-green-50: rgba(0, 253, 101, 0.5);
     --color-blue: #00ABEB;
     --color-blue-30: rgba(0, 172, 235, 0.3);
+    --color-blue-50: rgba(0, 172, 235, 0.5);
 
     --color-background: #2B2D31;
 }

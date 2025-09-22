@@ -1,4 +1,4 @@
-page-crew-host {
+page-crew {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -30,6 +30,10 @@ page-crew-host {
                 &:hover {
                     border-color: var(--color-white);
                     background-color: var(--color-white-10);
+                }
+
+                &:disabled {
+                    border-color: var(--color-white-10);
                 }
             }
         }
