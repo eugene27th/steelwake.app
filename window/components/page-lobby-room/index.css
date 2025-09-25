@@ -206,32 +206,30 @@ page-lobby-room {
             &:nth-child(3) {
                 .block {
                     flex: 1;
-                    
-                    button {
-                        &:nth-child(2) {
-                            height: 40px;
-                            margin-bottom: 5px;
-                            display: flex;
-                            flex-shrink: 0;
-                            align-items: center;
-                            justify-content: center;
-                            background-color: var(--color-white-10);
-                            border: none;
-                            transition: background-color 0.2s;
 
-                            &:hover {
-                                background-color: var(--color-white-20);
-                            }
+                    & > button {
+                        height: 40px;
+                        margin-bottom: 5px;
+                        display: flex;
+                        flex-shrink: 0;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: var(--color-white-10);
+                        border: none;
+                        transition: background-color 0.2s;
 
-                            .name {
-                                letter-spacing: 0.4px;
-                                color: var(--color-white);
-                            }
+                        &:hover {
+                            background-color: var(--color-white-20);
+                        }
 
-                            .limit {
-                                margin-left: 10px;
-                                color: var(--color-grey);
-                            }
+                        .name {
+                            letter-spacing: 0.4px;
+                            color: var(--color-white);
+                        }
+
+                        .limit {
+                            margin-left: 10px;
+                            color: var(--color-grey);
                         }
                     }
 
